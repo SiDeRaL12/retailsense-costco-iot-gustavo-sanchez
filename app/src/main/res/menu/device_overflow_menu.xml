@@ -5,6 +5,5 @@
         android:title="@string/schedule_maintenance" />
     <item
         android:id="@+id/action_toggle_enabled"
-        android:title="Toggle Enabled/Disabled" />
+        android:title="Toggle Enabled" />
 </menu>
-
