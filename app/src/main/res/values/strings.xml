@@ -7,4 +7,6 @@
     <string name="insights">Insights</string>
     <string name="reset_day">Reset Day</string>
     <string name="about">About</string>
+    <string name="no_stores">No stores available</string>
+    <string name="more_options">More options</string>
 </resources>

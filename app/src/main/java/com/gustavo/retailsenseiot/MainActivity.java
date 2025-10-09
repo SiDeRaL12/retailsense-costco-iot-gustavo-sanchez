@@ -40,8 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupCardClicks() {
         binding.cardStores.setOnClickListener(v -> {
-            // TODO: Start StoresActivity when implemented
-            Toast.makeText(this, "Stores - Coming in Phase 3", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, StoresActivity.class));
         });
         binding.cardDevices.setOnClickListener(v -> {
             // TODO: Start DevicesActivity when implemented
