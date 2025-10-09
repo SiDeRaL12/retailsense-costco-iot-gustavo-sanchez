@@ -7,6 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.material.snackbar.Snackbar;
+import com.gustavo.retailsenseiot.activities.StoresActivity;
 import com.gustavo.retailsenseiot.databinding.ActivityMainBinding;
 import com.gustavo.retailsenseiot.utils.DataManager;
 

@@ -1,10 +1,3 @@
-    }
-
-    private void showMaintenanceDialog(Store store) {
-        // TODO: Implement in Phase 9
-        Toast.makeText(this, "Maintenance dialog for " + store.getName(), Toast.LENGTH_SHORT).show();
-    }
-}
 package com.gustavo.retailsenseiot.activities;
 
 import android.content.Intent;
@@ -73,4 +66,10 @@ public class StoresActivity extends AppCompatActivity {
         Intent intent = new Intent(this, StoreDashboardActivity.class);
         intent.putExtra("storeId", store.getId());
         startActivity(intent);
+    }
 
+    private void showMaintenanceDialog(Store store) {
+        // TODO: Implement in Phase 9
+        Toast.makeText(this, "Maintenance dialog for " + store.getName(), Toast.LENGTH_SHORT).show();
+    }
+}

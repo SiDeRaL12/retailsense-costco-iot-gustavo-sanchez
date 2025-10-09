@@ -148,7 +148,7 @@
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <!-- Status chip colors -->
-    <color name="status_ok">#388E3C</color>
-    <color name="status_warning">#FFA000</color>
-    <color name="status_critical">#D32F2F</color>
+    <color name="status_ok">#4CAF50</color>
+    <color name="status_warning">#FF9800</color>
+    <color name="status_critical">#F44336</color>
 </resources>

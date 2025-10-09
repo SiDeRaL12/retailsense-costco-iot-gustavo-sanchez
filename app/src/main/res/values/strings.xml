@@ -9,4 +9,9 @@
     <string name="about">About</string>
     <string name="no_stores">No stores available</string>
     <string name="more_options">More options</string>
+    <string name="schedule_maintenance">Schedule Maintenance</string>
+    <string name="recent_alerts">Recent Alerts</string>
+    <string name="store_devices">Store Devices</string>
+    <string name="acknowledge_all">Acknowledge All</string>
+    <string name="advance_1_hour">Advance 1 Hour</string>
 </resources>
