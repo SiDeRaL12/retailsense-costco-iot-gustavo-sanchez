@@ -1,0 +1,48 @@
+# Gradle
+.gradle/
+**/build/
+local.properties
+
+# Android build outputs
+*.apk
+*.aab
+*.ap_
+*.aar
+output-metadata.json
+
+
+# Google services (if ever added locally)
+google-services.json
+
+# Profiling
+*.hprof
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Kotlin 2.0 local cache
+.kotlin/
+
+# Keep Gradle wrapper JAR tracked
+!gradle/wrapper/gradle-wrapper.jar
+
+# Bytecode / generated
+*.dex
+*.class
+
+# Logs
+*.log
+
+# Android Studio / IntelliJ
+*.iml
+.idea/
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Keystores
+*.jks
+*.keystore
+
+

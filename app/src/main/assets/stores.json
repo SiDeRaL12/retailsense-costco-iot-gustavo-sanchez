@@ -1,0 +1,10 @@
+{
+  "stores": [
+    {"id":"s001","name":"Costco Market St","city":"Toronto","timezone":"America/Toronto"},
+    {"id":"s002","name":"Costco Queen W","city":"Toronto","timezone":"America/Toronto"},
+    {"id":"s003","name":"Costco SoMa","city":"San Francisco","timezone":"America/Los_Angeles"},
+    {"id":"s004","name":"Costco Capitol Hill","city":"Seattle","timezone":"America/Los_Angeles"},
+    {"id":"s005","name":"Costco Midtown","city":"New York","timezone":"America/New_York"}
+  ]
+}
+

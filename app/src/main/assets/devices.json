@@ -1,0 +1,11 @@
+{
+  "devices": [
+    {"id":"d1001","storeId":"s001","type":"ColdChain","label":"FridgeA","status":"OK","config":{"minC":1.0,"maxC":4.0,"baselineKWh":null}},
+{"id":"d1002","storeId":"s001","type":"ShelfWeight","label":"WaterPallet","status":"OK","config":{"minPct":0.20,"baselineKWh":null}},
+{"id":"d1003","storeId":"s001","type":"PeopleCounter","label":"Entrance","status":"OK","config":{"baselineKWh":null}},
+{"id":"d1004","storeId":"s001","type":"EnergyMeter","label":"Main Meter","status":"OK","config":{"baselineKWh":22.0}},
+{"id":"d1005","storeId":"s001","type":"Beacon","label":"Endcap 1","status":"OK","config":{"baselineKWh":null}},
+{"id":"d2001","storeId":"s002","type":"ColdChain","label":"Freezer X","status":"OK","config":{"minC":-22.0,"maxC":-18.0,"baselineKWh":null}}
+  ]
+}
+
