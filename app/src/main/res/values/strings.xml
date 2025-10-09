@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">RetailSenseIoT</string>
+    <string name="welcome_message">Welcome to RetailSense</string>
+    <string name="stores">Stores</string>
+    <string name="devices">Devices</string>
+    <string name="alerts">Alerts</string>
+    <string name="insights">Insights</string>
+    <string name="reset_day">Reset Day</string>
+    <string name="about">About</string>
 </resources>

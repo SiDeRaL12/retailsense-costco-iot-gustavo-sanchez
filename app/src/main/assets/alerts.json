@@ -1,3 +1,5 @@
+{
+  "alerts": [
     {"id":"a001","deviceId":"d1001","severity":"Warning","type":"ColdChainTempHigh","message":"Fridge A above range","ts":"2025-10-02T08:40:00Z","ack":false,"suppressedUntil":null}
   ]
 }
