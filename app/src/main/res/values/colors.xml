@@ -140,4 +140,11 @@
     <color name="md_theme_surfaceContainer_highContrast">#F1DFDA</color>
     <color name="md_theme_surfaceContainerHigh_highContrast">#E2D1CC</color>
     <color name="md_theme_surfaceContainerHighest_highContrast">#D4C3BE</color>
+    <!-- Added Material colors for theme compatibility -->
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>
