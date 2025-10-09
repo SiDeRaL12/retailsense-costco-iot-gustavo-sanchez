@@ -44,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, StoresActivity.class));
         });
         binding.cardDevices.setOnClickListener(v -> {
-            // TODO: Start DevicesActivity when implemented
-            Toast.makeText(this, "Devices - Coming in Phase 5", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, com.gustavo.retailsenseiot.activities.DevicesActivity.class));
         });
         binding.cardAlerts.setOnClickListener(v -> {
             // TODO: Start AlertsActivity when implemented

@@ -14,4 +14,8 @@
     <string name="store_devices">Store Devices</string>
     <string name="acknowledge_all">Acknowledge All</string>
     <string name="advance_1_hour">Advance 1 Hour</string>
+    <string name="search_devices">Search devices</string>
+    <string name="filter_by_type">Filter by type</string>
+    <string name="filter_by_store">Filter by store</string>
+    <string name="no_devices_found">No devices found</string>
 </resources>
