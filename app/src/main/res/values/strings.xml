@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">RetailSenseIoT</string>
+    <string name="welcome_message">Welcome to RetailSense</string>
+    <string name="stores">Stores</string>
+    <string name="devices">Devices</string>
+    <string name="alerts">Alerts</string>
+    <string name="insights">Insights</string>
+    <string name="reset_day">Reset Day</string>
+    <string name="about">About</string>
+    <string name="no_stores">No stores available</string>
+    <string name="more_options">More options</string>
+    <string name="schedule_maintenance">Schedule Maintenance</string>
+    <string name="recent_alerts">Recent Alerts</string>
+    <string name="store_devices">Store Devices</string>
+    <string name="acknowledge_all">Acknowledge All</string>
+    <string name="advance_1_hour">Advance 1 Hour</string>
+    <string name="search_devices">Search devices...</string>
+    <string name="filter_by_type">Filter by Type</string>
+    <string name="filter_by_store">Filter by Store</string>
+    <string name="no_devices_found">No devices found</string>
+    <string name="device_alerts">Device Alerts</string>
+    <string name="calibrate_device">Calibrate Device</string>
+    <string name="alert_details">%1$s • %2$s</string>
+    <string name="no_alerts_found">No alerts found</string>
+    <string name="search_alerts">Search alerts...</string>
+    <string name="analytics_dashboard">Analytics Dashboard</string>
+
 </resources>

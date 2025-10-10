@@ -19,6 +19,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activities.StoresActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.StoreDashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DevicesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.DeviceDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.AlertsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.InsightsActivity"
+            android:exported="false" />
     </application>
 
 

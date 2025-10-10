@@ -9,6 +9,28 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * DataManager - Centralized data management utility for RetailSense IoT app
+ *
+ * This singleton class handles all data operations for the RetailSense IoT application,
+ * providing offline-first data loading and management capabilities.
+ *
+ * Key Features:
+ * - Offline-first data loading from JSON/CSV assets
+ * - Graceful CSV parsing with error handling (NF4 requirement)
+ * - Real-time alert management and filtering
+ * - Device filtering and aggregation with performance optimization
+ * - Centralized data caching to minimize file I/O operations
+ *
+ * Performance Considerations:
+ * - Data is loaded once during app initialization and cached in memory
+ * - CSV parsing handles malformed data gracefully without crashing
+ * - Filtering operations are optimized for sub-100ms performance (V1 requirement)
+ *
+ * @author Gustavo Sanchez
+ * @course MAP524 - Mobile App Development
+ * @version 1.0.0
+ */
 public class DataManager {
     private static final String TAG = "DataManager";
     private static List<Store> stores = new ArrayList<>();
@@ -70,6 +92,7 @@ public class DataManager {
     public static List<Store> getStores() { return new ArrayList<>(stores); }
     public static List<Device> getDevices() { return new ArrayList<>(devices); }
     public static List<Alert> getAlerts() { return new ArrayList<>(alerts); }
+    public static List<Alert> getAllAlerts() { return new ArrayList<>(alerts); }
 
     // Utility methods
     public static List<Device> getDevicesByStore(String storeId) {
@@ -140,5 +163,22 @@ public class DataManager {
         initialize(context);
         maintenanceTickets.clear();
     }
-}
 
+    public static void addMaintenanceTicket(MaintenanceTicket ticket) {
+        maintenanceTickets.add(ticket);
+    }
+
+    public static List<MaintenanceTicket> getMaintenanceTickets() {
+        return new ArrayList<>(maintenanceTickets);
+    }
+
+    public static void suppressAlert(String alertId, String suppressUntil) {
+        for (Alert alert : alerts) {
+            if (alert.getId().equals(alertId)) {
+                alert.setSuppressed(true);
+                alert.setSuppressedUntil(suppressUntil);
+                break;
+            }
+        }
+    }
+}

@@ -1,8 +1,18 @@
 package com.gustavo.retailsenseiot.models;
 
 public class ColdChainReading extends Reading {
-    private double temperature;
-    public double getTemperature() { return temperature; }
-    public void setTemperature(double temperature) { this.temperature = temperature; }
-}
+    private long timestamp;
+    private double tempC;
+    private int alertCode;
 
+    public ColdChainReading(long timestamp, double tempC, int alertCode) {
+        this.timestamp = timestamp;
+        this.tempC = tempC;
+        this.alertCode = alertCode;
+    }
+
+    @Override
+    public long getTimestamp() { return timestamp; }
+    public double getTempC() { return tempC; }
+    public int getAlertCode() { return alertCode; }
+}
