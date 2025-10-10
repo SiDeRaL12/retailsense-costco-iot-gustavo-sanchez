@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/md_theme_primary"
+            app:title="@string/insights"
+            app:titleTextColor="@color/md_theme_onPrimary"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvInsightsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/analytics_dashboard"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+        <!-- Chart 1: Traffic & Energy Combined -->
+        <TextView
+            android:id="@+id/tvChart1Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Traffic vs Energy Consumption"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvInsightsTitle" />
+
+        <com.github.mikephil.charting.charts.CombinedChart
+            android:id="@+id/chartTrafficEnergy"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvChart1Title" />
+
+        <!-- Chart 2: Temperature Trends -->
+        <TextView
+            android:id="@+id/tvChart2Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cold Chain Temperature Trends"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/chartTrafficEnergy" />
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartTemperature"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvChart2Title" />
+
+        <!-- Chart 3: Stock Levels -->
+        <TextView
+            android:id="@+id/tvChart3Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Product Stock Levels"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/chartTemperature" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/chartStockLevels"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvChart3Title" />
+
+        <!-- Chart 4: Correlation Analysis -->
+        <TextView
+            android:id="@+id/tvChart4Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Energy vs Traffic Correlation Analysis"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/chartStockLevels" />
+
+        <com.github.mikephil.charting.charts.ScatterChart
+            android:id="@+id/chartCorrelation"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvChart4Title" />
+
+        <TextView
+            android:id="@+id/tvCorrelationValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/chartCorrelation" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

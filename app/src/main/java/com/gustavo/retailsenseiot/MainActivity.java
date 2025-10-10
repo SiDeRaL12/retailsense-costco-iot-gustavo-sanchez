@@ -47,12 +47,10 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(this, com.gustavo.retailsenseiot.activities.DevicesActivity.class));
         });
         binding.cardAlerts.setOnClickListener(v -> {
-            // TODO: Start AlertsActivity when implemented
-            Toast.makeText(this, "Alerts - Coming in Phase 7", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, com.gustavo.retailsenseiot.activities.AlertsActivity.class));
         });
         binding.cardInsights.setOnClickListener(v -> {
-            // TODO: Start InsightsActivity when implemented
-            Toast.makeText(this, "Insights - Coming in Phase 8", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(this, com.gustavo.retailsenseiot.activities.InsightsActivity.class));
         });
     }
 

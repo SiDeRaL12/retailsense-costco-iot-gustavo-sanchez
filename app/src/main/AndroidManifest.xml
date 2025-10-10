@@ -31,6 +31,12 @@
         <activity
             android:name=".activities.DeviceDetailActivity"
             android:exported="false" />
+        <activity
+            android:name=".activities.AlertsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.InsightsActivity"
+            android:exported="false" />
     </application>
 
 

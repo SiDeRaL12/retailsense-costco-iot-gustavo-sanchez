@@ -70,6 +70,7 @@ public class DataManager {
     public static List<Store> getStores() { return new ArrayList<>(stores); }
     public static List<Device> getDevices() { return new ArrayList<>(devices); }
     public static List<Alert> getAlerts() { return new ArrayList<>(alerts); }
+    public static List<Alert> getAllAlerts() { return new ArrayList<>(alerts); }
 
     // Utility methods
     public static List<Device> getDevicesByStore(String storeId) {
@@ -141,4 +142,3 @@ public class DataManager {
         maintenanceTickets.clear();
     }
 }
-
