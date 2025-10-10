@@ -10,6 +10,34 @@ import com.gustavo.retailsenseiot.models.Device;
 import com.gustavo.retailsenseiot.utils.DataManager;
 import java.util.List;
 
+/**
+ * DevicesAdapter - RecyclerView adapter for device list with high-performance filtering
+ *
+ * This adapter manages the display of IoT devices in the DevicesActivity with advanced
+ * filtering capabilities and strict performance requirements.
+ *
+ * Performance Requirements:
+ * - V1: Filtering operations must complete under 100ms for optimal user experience
+ * - V2: Disabled devices are excluded from aggregate calculations
+ * - Optimized data structures and algorithms for real-time search and filtering
+ *
+ * Key Features:
+ * - Real-time text search filtering
+ * - Multi-criteria filtering (type, store, status)
+ * - Device enable/disable toggle with immediate UI updates
+ * - Maintenance scheduling integration
+ * - Material Design 3 styled device cards
+ *
+ * Filter Types Supported:
+ * - Text search (device name, ID, location)
+ * - Device type (ColdChain, ShelfWeight, EnergyMeter)
+ * - Store location filtering
+ * - Status filtering (enabled/disabled)
+ *
+ * @author Gustavo Sanchez
+ * @course MAP524 - Mobile App Development
+ * @version 1.0.0
+ */
 public class DevicesAdapter extends RecyclerView.Adapter<DevicesAdapter.DeviceViewHolder> {
     private List<Device> devices;
     private final OnDeviceClickListener onDeviceClick;
