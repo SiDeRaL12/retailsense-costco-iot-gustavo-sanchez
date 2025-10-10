@@ -8,9 +8,11 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import com.google.android.material.chip.Chip;
+import com.google.android.material.snackbar.Snackbar;
 import com.gustavo.retailsenseiot.R;
 import com.gustavo.retailsenseiot.adapters.DevicesAdapter;
 import com.gustavo.retailsenseiot.databinding.ActivityDevicesBinding;
+import com.gustavo.retailsenseiot.dialogs.MaintenanceScheduleDialog;
 import com.gustavo.retailsenseiot.models.Device;
 import com.gustavo.retailsenseiot.utils.DataManager;
 import java.util.ArrayList;
@@ -179,9 +181,10 @@ public class DevicesActivity extends AppCompatActivity {
     }
 
     private void showMaintenanceDialog(Device device) {
-        // V3: Maintenance dialog validates (implement in Phase 9)
-        android.widget.Toast.makeText(this, "Maintenance for " + device.getLabel(),
-            android.widget.Toast.LENGTH_SHORT).show();
+        MaintenanceScheduleDialog.show(this, device.getId(), ticket -> {
+            Snackbar.make(binding.getRoot(),
+                "Maintenance scheduled for " + device.getLabel(), Snackbar.LENGTH_SHORT).show();
+        });
     }
 
     private void toggleDeviceEnabled(Device device) {

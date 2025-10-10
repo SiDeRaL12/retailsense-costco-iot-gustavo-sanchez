@@ -141,4 +141,22 @@ public class DataManager {
         initialize(context);
         maintenanceTickets.clear();
     }
+
+    public static void addMaintenanceTicket(MaintenanceTicket ticket) {
+        maintenanceTickets.add(ticket);
+    }
+
+    public static List<MaintenanceTicket> getMaintenanceTickets() {
+        return new ArrayList<>(maintenanceTickets);
+    }
+
+    public static void suppressAlert(String alertId, String suppressUntil) {
+        for (Alert alert : alerts) {
+            if (alert.getId().equals(alertId)) {
+                alert.setSuppressed(true);
+                alert.setSuppressedUntil(suppressUntil);
+                break;
+            }
+        }
+    }
 }

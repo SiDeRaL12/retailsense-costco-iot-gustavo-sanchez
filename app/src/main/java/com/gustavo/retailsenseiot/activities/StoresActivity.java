@@ -10,9 +10,11 @@ import com.gustavo.retailsenseiot.adapters.StoresAdapter;
 import com.gustavo.retailsenseiot.databinding.ActivityStoresBinding;
 import com.gustavo.retailsenseiot.models.Store;
 import com.gustavo.retailsenseiot.utils.DataManager;
+import com.gustavo.retailsenseiot.dialogs.MaintenanceScheduleDialog;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import com.google.android.material.snackbar.Snackbar;
 
 public class StoresActivity extends AppCompatActivity {
     private ActivityStoresBinding binding;
@@ -69,7 +71,9 @@ public class StoresActivity extends AppCompatActivity {
     }
 
     private void showMaintenanceDialog(Store store) {
-        // TODO: Implement in Phase 9
-        Toast.makeText(this, "Maintenance dialog for " + store.getName(), Toast.LENGTH_SHORT).show();
+        MaintenanceScheduleDialog.show(this, store.getId(), ticket -> {
+            Snackbar.make(binding.getRoot(),
+                "Maintenance scheduled for " + ticket.getDate(), Snackbar.LENGTH_SHORT).show();
+        });
     }
 }

@@ -13,6 +13,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.gustavo.retailsenseiot.R;
 import com.gustavo.retailsenseiot.adapters.DeviceAlertsAdapter;
 import com.gustavo.retailsenseiot.databinding.ActivityDeviceDetailBinding;
+import com.gustavo.retailsenseiot.dialogs.DeviceCalibrateDialog;
 import com.gustavo.retailsenseiot.models.*;
 import com.gustavo.retailsenseiot.utils.CSVDataLoader;
 import com.gustavo.retailsenseiot.utils.DataManager;
@@ -80,20 +81,10 @@ public class DeviceDetailActivity extends AppCompatActivity {
             binding.chipDeviceStatus.setChipBackgroundColorResource(R.color.status_critical);
         }
 
-        // Configuration info
+        // Configuration info - simplified for now since Device model doesn't have config
         StringBuilder configInfo = new StringBuilder();
-        if (device.getConfig().getMinC() != null) {
-            configInfo.append("Min: ").append(device.getConfig().getMinC()).append("°C ");
-        }
-        if (device.getConfig().getMaxC() != null) {
-            configInfo.append("Max: ").append(device.getConfig().getMaxC()).append("°C ");
-        }
-        if (device.getConfig().getMinPct() != null) {
-            configInfo.append("Min: ").append(device.getConfig().getMinPct() * 100).append("% ");
-        }
-        if (device.getConfig().getBaselineKWh() != null) {
-            configInfo.append("Baseline: ").append(device.getConfig().getBaselineKWh()).append(" kWh");
-        }
+        configInfo.append("Device Type: ").append(device.getType());
+        configInfo.append(" | Status: ").append(device.getStatus());
 
         binding.tvConfigInfo.setText(configInfo.toString().trim());
     }
@@ -175,8 +166,10 @@ public class DeviceDetailActivity extends AppCompatActivity {
     }
 
     private void showCalibrateDialog() {
-        // TODO: Implement calibration dialog in Phase 9
-        Snackbar.make(binding.getRoot(), "Calibration updated", Snackbar.LENGTH_SHORT).show();
+        DeviceCalibrateDialog.show(this, device, calibratedDevice -> {
+            setupDeviceInfo(); // Refresh device info
+            Snackbar.make(binding.getRoot(), "Device calibrated successfully", Snackbar.LENGTH_SHORT).show();
+        });
     }
 
     private void acknowledgeAlert(Alert alert) {
@@ -195,4 +188,3 @@ public class DeviceDetailActivity extends AppCompatActivity {
         Snackbar.make(binding.getRoot(), "All alerts acknowledged", Snackbar.LENGTH_SHORT).show();
     }
 }
-

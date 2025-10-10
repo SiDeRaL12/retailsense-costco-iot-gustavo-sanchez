@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <RadioGroup
+        android:id="@+id/rgDuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rb30Minutes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="30 minutes"
+            android:padding="8dp" />
+
+        <RadioButton
+            android:id="@+id/rb1Hour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 hour"
+            android:checked="true"
+            android:padding="8dp" />
+
+        <RadioButton
+            android:id="@+id/rb4Hours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4 hours"
+            android:padding="8dp" />
+
+        <RadioButton
+            android:id="@+id/rb24Hours"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="24 hours"
+            android:padding="8dp" />
+
+    </RadioGroup>
+
+</LinearLayout>

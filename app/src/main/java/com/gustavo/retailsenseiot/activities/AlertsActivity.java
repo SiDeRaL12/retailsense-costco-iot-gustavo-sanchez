@@ -10,6 +10,7 @@ import com.google.android.material.snackbar.Snackbar;
 import com.gustavo.retailsenseiot.R;
 import com.gustavo.retailsenseiot.adapters.AlertsAdapter;
 import com.gustavo.retailsenseiot.databinding.ActivityAlertsBinding;
+import com.gustavo.retailsenseiot.dialogs.AlertSuppressDialog;
 import com.gustavo.retailsenseiot.models.Alert;
 import com.gustavo.retailsenseiot.models.Device;
 import com.gustavo.retailsenseiot.models.Store;
@@ -192,10 +193,10 @@ public class AlertsActivity extends AppCompatActivity {
     }
 
     private void suppressAlert(Alert alert) {
-        allAlerts.remove(alert);
-        applyFilters();
-
-        Snackbar.make(binding.getRoot(), "Alert suppressed", Snackbar.LENGTH_SHORT).show();
+        AlertSuppressDialog.show(this, alert, suppressedAlert -> {
+            applyFilters(); // Refresh alerts list
+            Snackbar.make(binding.getRoot(), "Alert suppressed", Snackbar.LENGTH_SHORT).show();
+        });
     }
 
     private void openDevice(Alert alert) {
