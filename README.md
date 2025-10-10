@@ -23,7 +23,7 @@ Offline Android application for managing Costco store IoT devices using Material
 ![Home Screen](screenshots/2_homepage.png)
 ![Store Dashboard](screenshots/3_store_dashboard.png)
 ![Device Details](screenshots/6_devices_charts.png)
-![Insights](screenshots/7_insights_charts.png)
+![Insights](screenshots/8_insights_charts.png)
 
 ## Build Instructions
 
@@ -35,7 +35,7 @@ Offline Android application for managing Costco store IoT devices using Material
 ### Setup Steps
 1. Clone repository:
    ```
-   git clone https://github.com/yourusername/retailsense-costco-iot-gustavo-sanchez.git
+   git clone https://github.com/SiDeRaL12/retailsense-costco-iot-gustavo-sanchez.git
    cd retailsense-costco-iot-gustavo-sanchez
    ```
 
